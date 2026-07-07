@@ -39,7 +39,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm i # or pnpm install / yarn install / bun install
+        run: pnpm i --no-frozen-lockfile # or pnpm install / yarn install / bun install
 
       - name: Build
         run: |
