@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: SPD7
 subtitle: ''
-description: ''
+description: 'Notes on IT, cars, and whatever else I figure out along the way'
 keywords:
-author: John Doe
+author: Rakan
 language: en
-timezone: ''
+timezone: 'Asia/Riyadh'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
