@@ -1,19 +1,41 @@
 dark_mode:
   default: dark
 
+navbar:
+  blog_title: 'SPD7'
+  menu:
+    - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
+    - { key: 'archives', link: '/archives/', icon: 'iconfont icon-archive-fill' }
+    - { key: 'categories', link: '/categories/', icon: 'iconfont icon-folder-fill' }
+    - { key: 'tags', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
+    - { key: 'cv', link: '/cv.html', icon: 'iconfont icon-download-fill', name: 'Download CV' }
+
 index:
-  banner_img: ''
   banner_img_height: 0
   slogan:
     enable: true
     text: 'Notes on IT, cars, and whatever else I figure out along the way'
+
+archive:
+  banner_img_height: 0
+
+category:
+  banner_img_height: 0
+
+tag:
+  banner_img_height: 0
+
+about:
+  banner_img_height: 0
+  name: 'Rakan'
+  intro: 'IT Engineer · Riyadh'
 
 color:
   body_bg_color: "#0a0a0f"
   body_bg_color_dark: "#0a0a0f"
   navbar_bg_color: "#0a0a0f"
   navbar_bg_color_dark: "#0a0a0f"
-  text_color: "#e0f7ff"
   text_color_dark: "#e0f7ff"
   meta_color_dark: "#00e5ff"
   link_color_dark: "#00e5ff"
@@ -22,3 +44,6 @@ color:
   code_bg_color_dark: "#0d0d12"
   scrollbar_color_dark: "#00e5ff"
   scrollbar_hover_color_dark: "#ff2a6d"
+
+footer:
+  content: 'Built by Rakan'
