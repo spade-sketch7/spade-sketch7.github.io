@@ -1,0 +1,6 @@
+<h1>Tags</h1>
+<div class="tag-list">
+<% site.tags.each(function(tag){ %>
+  <a href="<%- url_for(tag.path) %>"><%= tag.name %> (<%= tag.length %>)</a>
+<% }) %>
+</div>
