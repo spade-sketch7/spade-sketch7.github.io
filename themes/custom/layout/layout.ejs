@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= page.title ? page.title + ' — ' : '' %><%= config.title %></title>
+<meta name="description" content="<%= page.description || config.description %>">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --card: #12121a;
+    --text: #e0f7ff;
+    --muted: #7d8a99;
+    --cyan: #00e5ff;
+    --pink: #ff2a6d;
+    --line: #1f2430;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, "Segoe UI", sans-serif; line-height: 1.6; }
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { color: var(--pink); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  nav { border-bottom: 1px solid var(--line); padding: 20px 0; }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .brand { font-weight: 700; font-size: 20px; color: var(--text); }
+  .menu { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; }
+  main { padding: 48px 0; min-height: 60vh; }
+  h1 { font-size: 28px; margin-bottom: 8px; }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; }
+  .card h2 { font-size: 18px; margin-bottom: 6px; }
+  .card h2 a { color: var(--text); }
+  .card p { color: var(--muted); font-size: 14px; }
+  article img { max-width: 100%; border-radius: 6px; }
+  article pre { background: #0d0d12; padding: 16px; border-radius: 6px; overflow-x: auto; }
+  footer { border-top: 1px solid var(--line); padding: 24px 0; text-align: center; color: var(--muted); font-size: 13px; }
+  .tag-list a { display: inline-block; margin: 4px 8px 4px 0; padding: 4px 10px; background: var(--card); border-radius: 4px; font-size: 13px; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="<%- url_for('/') %>"><%= config.title %></a>
+    <div class="menu">
+      <a href="<%- url_for('/') %>">Home</a>
+      <a href="<%- url_for('/archives/') %>">Archives</a>
+      <a href="<%- url_for('/categories/') %>">Categories</a>
+      <a href="<%- url_for('/tags/') %>">Tags</a>
+      <a href="<%- url_for('/about/') %>">About</a>
+      <a href="<%- url_for('/cv.html') %>">Download CV</a>
+    </div>
+  </div>
+</nav>
+<main class="wrap">
+  <%- body %>
+</main>
+<footer>Built by <%= config.author %></footer>
+</body>
+</html>
