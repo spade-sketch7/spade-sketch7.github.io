@@ -1,0 +1,7 @@
+<h1><%= page.title || 'Archives' %></h1>
+<% page.posts.each(function(post){ %>
+  <div class="card">
+    <h2><a href="<%- url_for(post.path) %>"><%= post.title %></a></h2>
+    <p class="meta"><%= date(post.date, config.date_format) %></p>
+  </div>
+<% }) %>
