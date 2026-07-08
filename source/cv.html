@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rakan Bandar — IT Engineer</title>
+<meta name="description" content="CV of Rakan Bandar, IT Engineer based in Riyadh, Saudi Arabia. Microsoft 365, Intune, Entra ID, endpoint and network security.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #171A1F;
+    --muted: #5C6570;
+    --paper: #FFFFFF;
+    --wash: #F7F9FA;
+    --line: #E5E9ED;
+    --accent: #00A0C8;      /* Performance Blue */
+    --accent-dark: #007A99;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--wash);
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    background: var(--paper);
+    min-height: 100vh;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    padding: 56px 56px 36px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+
+  /* signature: the kerb — a thin Performance Blue line that anchors the name */
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent) 38%, var(--ink) 38%, var(--ink) 100%);
+  }
+
+  h1 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .role {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+    color: var(--accent-dark);
+    margin-top: 8px;
+    letter-spacing: 0.4px;
+  }
+
+  .contact {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 28px;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+
+  .contact a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition: border-color 0.15s ease;
+  }
+  .contact a:hover, .contact a:focus-visible { border-color: var(--accent); }
+  .contact a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- Layout ---------- */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 232px;
+    gap: 0;
+  }
+
+  main { padding: 40px 40px 56px 56px; }
+  aside {
+    padding: 40px 40px 56px 32px;
+    border-left: 1px solid var(--line);
+  }
+
+  /* ---------- Sections ---------- */
+  section + section { margin-top: 36px; }
+
+  h2 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: "";
+    width: 14px; height: 2px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .summary { font-size: 15.5px; }
+
+  /* ---------- Experience ---------- */
+  .job + .job { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--line); }
+
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  h3 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .org { color: var(--muted); font-size: 14.5px; margin-top: 1px; }
+
+  .dates {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .job ul { margin: 10px 0 0 18px; }
+  .job li { margin-bottom: 6px; }
+  .job li::marker { color: var(--accent); }
+
+  /* ---------- Sidebar ---------- */
+  aside section + section { margin-top: 32px; }
+
+  .skill-group { margin-bottom: 14px; }
+  .skill-group:last-child { margin-bottom: 0; }
+
+  .skill-label {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .skill-items { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+
+  .cert-item, .lang-item { font-size: 13.5px; margin-bottom: 8px; }
+  .cert-item .dates { display: block; margin-top: 1px; }
+
+  /* ---------- Print button ---------- */
+  .print-bar {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    z-index: 10;
+  }
+
+  .print-btn {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    background: var(--ink);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    transition: background 0.15s ease;
+  }
+  .print-btn:hover { background: var(--accent-dark); }
+  .print-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 720px) {
+    header { padding: 40px 24px 28px; }
+    h1 { font-size: 30px; }
+    .body-grid { grid-template-columns: 1fr; }
+    main { padding: 28px 24px 8px; }
+    aside { border-left: none; border-top: 1px solid var(--line); padding: 28px 24px 48px; margin-top: 28px; }
+    .job-head { flex-direction: column; gap: 2px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+
+  /* ---------- Print / PDF ---------- */
+  @page { size: A4; margin: 14mm 14mm 16mm; }
+
+  @media print {
+    body { background: #fff; font-size: 12.5px; }
+    .page { max-width: none; box-shadow: none; }
+    header { padding: 0 0 20px; }
+    header::before { height: 3px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    h1 { font-size: 28px; }
+    main { padding: 24px 24px 0 0; }
+    aside { padding: 24px 0 0 20px; }
+    .print-bar { display: none; }
+    a { color: var(--ink); border: none !important; }
+    .job { break-inside: avoid; }
+    h2::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .job li::marker { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header>
+    <h1>Rakan Bandar Al Zahrani</h1>
+    <p class="role">IT Engineer · Cloud, Endpoint &amp; Security</p>
+    <div class="contact">
+      <span>Riyadh, Saudi Arabia</span>
+      <a href="mailto:rakan@spd7.com">rakan@spd7.com</a>
+      <a href="https://spd7.com">spd7.com</a>
+      <span>+966 56 665 5051</span>
+    </div>
+  </header>
+
+  <div class="body-grid">
+
+    <main>
+
+      <section>
+        <h2>Profile</h2>
+        <p class="summary">
+          Adaptable and quick-learning, with a focus on innovative problem-solving across Windows, iOS, and
+          mobile platforms. Five years in technical support, system administration, and cybersecurity,
+          with a dedication to enhancing workflow efficiency and contributing to team success.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <h3>IT Engineer</h3>
+              <p class="org">Oivan — Riyadh, Saudi Arabia</p>
+            </div>
+            <span class="dates">May 2023 — Present</span>
+          </div>
+          <ul>
+            <li>Support IT infrastructure with a focus on cloud administration, endpoint management, and security enhancement, including Microsoft Entra ID, Azure, and Intune.</li>
+            <li>Manage internal server infrastructure through regular updates, monitoring, and reporting to ensure optimal performance, availability, and security.</li>
+            <li>Provide technical support across departments, resolving employee issues efficiently and maintaining business continuity.</li>
+            <li>Maintain the internal inventory system, overseeing hardware, software, and license assets; collaborate with vendors on procurement.</li>
+            <li>Conduct onboarding cybersecurity awareness sessions to promote secure computing practices.</li>
+            <li>Evaluate and test macOS virtualization solutions for business and operational requirements.</li>
+            <li>Translate technical concepts and requirements between English and Arabic for clients and stakeholders.</li>
+            <li>Develop and maintain knowledge base articles and troubleshooting documentation to improve team efficiency.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <h3>Security Remediation Consultant</h3>
+              <p class="org">Almarai Project (Oivan) — Riyadh, Saudi Arabia</p>
+            </div>
+            <span class="dates">Jul 2025 — 6 months</span>
+          </div>
+          <ul>
+            <li>Worked as an MS365 Zero Trust Security Remediation Consultant, identifying and addressing security vulnerabilities to enhance organizational security posture.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <h3>Operations, Maintenance &amp; End-User Service Management</h3>
+              <p class="org">Communications, Space &amp; Technology Commission — Riyadh, Saudi Arabia</p>
+            </div>
+            <span class="dates">Mar 2020 — Apr 2023</span>
+          </div>
+          <ul>
+            <li>Blended traditional helpdesk duties with advanced responsibilities: incident response, user account management, and administrative functions.</li>
+            <li>Enabled and troubleshot BitLocker across a user base of 700+ employees in collaboration with colleagues.</li>
+            <li>Delivered dedicated, on-call executive-level IT support to the Governor's office, handling high-priority requirements with confidentiality and precision.</li>
+            <li>Provided real-time monitoring and technical assistance during international video conferences and global events.</li>
+            <li>Used Desktop Central for deployment, Acronis for imaging/backups, and Opswat for enhanced endpoint security.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <h3>Helpdesk Trainee</h3>
+            </div>
+            <span class="dates">Nov 2019 — Dec 2019</span>
+          </div>
+          <ul>
+            <li>Completed an intensive Help Desk Technician training program alongside engineers and academic instructors, building core service-desk skills.</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Honors &amp; Awards</h2>
+        <div class="job">
+          <ul>
+            <li>CST Governor Mohammed Altamimi Award — reaching exceptional cybersecurity controls at 99.08%</li>
+            <li>CST Support Team Excellence Award for Exceptional Performance, 2022</li>
+            <li>CST Adherence to Cybersecurity Controls recognition</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <aside>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skill-group">
+          <p class="skill-label">Microsoft 365 &amp; Cloud</p>
+          <p class="skill-items">Entra ID · Azure · Intune · Exchange Online · Zero Trust security</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Security</p>
+          <p class="skill-items">BitLocker · Endpoint security · Opswat · Cybersecurity awareness training</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Platforms</p>
+          <p class="skill-items">Windows · iOS · macOS virtualization · Desktop Central · Acronis</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Languages</p>
+          <p class="skill-items">Arabic (Native) · English (Professional — technical translation)</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <p class="cert-item">Nokia Hardware Maintenance</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p class="cert-item">Bachelor's Degree, System Support — Second Honor Degree<span class="dates">CST On-Site · 2021–2022 · GPA 4.27/5.00</span></p>
+        <p class="cert-item">Diploma, Technical Support<span class="dates">Technical &amp; Vocational Training Corp · 2019–2020 · GPA 4.18/5.00</span></p>
+      </section>
+
+    </aside>
+
+  </div>
+
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Download PDF</button>
+</div>
+
+</body>
+</html>
