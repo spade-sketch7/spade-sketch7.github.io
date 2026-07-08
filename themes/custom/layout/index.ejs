@@ -1,0 +1,7 @@
+<% page.posts.each(function(post){ %>
+  <div class="card">
+    <h2><a href="<%- url_for(post.path) %>"><%= post.title %></a></h2>
+    <p class="meta"><%= date(post.date, config.date_format) %> · <%= post.category0 || '' %></p>
+    <p><%- strip_html(post.content).substring(0, 160) %>…</p>
+  </div>
+<% }) %>
