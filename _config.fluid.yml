@@ -6,7 +6,7 @@ navbar:
     - { key: 'categories', link: '/categories/', icon: 'iconfont icon-folder-fill', name: 'Categories' }
     - { key: 'tags', link: '/tags/', icon: 'iconfont icon-tags-fill', name: 'Tags' }
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill', name: 'About' }
-    - { key: 'cv', link: '/cv.html', icon: 'iconfont icon-download-fill', name: 'Download CV' }
+    - { key: 'cv', link: '/cv.pdf', icon: 'iconfont icon-download-fill', name: 'Download CV' }
 
 about:
   banner_img_height: 0
