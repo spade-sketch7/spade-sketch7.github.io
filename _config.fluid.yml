@@ -1,18 +1,24 @@
 dark_mode:
   default: dark
 
+index:
+  banner_img: ''
+  banner_img_height: 0
+  slogan:
+    enable: true
+    text: 'Notes on IT, cars, and whatever else I figure out along the way'
+
 color:
+  body_bg_color: "#0a0a0f"
+  body_bg_color_dark: "#0a0a0f"
+  navbar_bg_color: "#0a0a0f"
+  navbar_bg_color_dark: "#0a0a0f"
+  text_color: "#e0f7ff"
   text_color_dark: "#e0f7ff"
   meta_color_dark: "#00e5ff"
   link_color_dark: "#00e5ff"
   link_hover_color_dark: "#ff2a6d"
-  body_bg_color_dark: "#0a0e17"
-  navbar_bg_color_dark: "#0f1420"
-  card_bg_color_dark: "#131826"
-  code_bg_color_dark: "#0d1117"
-  code_highlight_color_dark: "#ff2a6d"
+  card_bg_color_dark: "#12121a"
+  code_bg_color_dark: "#0d0d12"
   scrollbar_color_dark: "#00e5ff"
   scrollbar_hover_color_dark: "#ff2a6d"
-
-footer:
-  content: 'Built by Rakan · Performance Blue'
