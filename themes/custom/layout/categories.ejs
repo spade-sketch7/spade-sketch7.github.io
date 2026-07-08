@@ -1,0 +1,6 @@
+<h1>Categories</h1>
+<div class="tag-list">
+<% site.categories.each(function(cat){ %>
+  <a href="<%- url_for(cat.path) %>"><%= cat.name %> (<%= cat.length %>)</a>
+<% }) %>
+</div>
